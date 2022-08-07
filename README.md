@@ -1,6 +1,6 @@
 ## Filterable Gallery with Lightbox
 
-### [Demo Link](https://gulshancodes.github.io/sidebar/) 🔗
+### [Demo Link](https://gulshancodes.github.io/filterable-gallery/) 🔗
 
 Filterable Gallery with Lightbox using Vanilla JavaScript
 
