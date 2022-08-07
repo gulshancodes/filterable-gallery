@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filterable Gallery with Lightbox</title>
+    <!-- Built by : Gulshan Songara -->
+
+    <!--====== CSS ======-->
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <!--====== Gallery Section ======-->
+    <section id="gallery">
+        <div class="container">
+
+            <!-- Filterable Gallery -->
+            <ul class="gallery_tabs">
+                <li class="active" data-filter="all">All</li>
+                <li data-filter="camera">Cameras</li>
+                <li data-filter="laptop">Laptops</li>
+                <li data-filter="mobile">Mobiles</li>
+                <li data-filter="headphone">Headphones</li>
+            </ul>
+
+            <div class="gallery_wrapper">
+                <div class="gallery_item camera">
+                    <img src="https://images.unsplash.com/photo-1585218356057-dc0e8d3558bb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
+                        alt="img">
+                </div>
+
+                <div class="gallery_item headphone">
+                    <img src="https://images.unsplash.com/photo-1599669454699-248893623440?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGhlYWRwaG9uZXN8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                        alt="img">
+                </div>
+
+                <div class="gallery_item laptop">
+                    <img src="https://images.unsplash.com/photo-1602080858428-57174f9431cf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGxhcHRvcHxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60"
+                        alt="img">
+                </div>
+
+                <div class="gallery_item mobile">
+                    <img src="https://images.unsplash.com/photo-1596558450268-9c27524ba856?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8bW9iaWxlc3xlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60"
+                        alt="img">
+                </div>
+
+                <div class="gallery_item laptop">
+                    <img src="https://images.unsplash.com/photo-1559163499-413811fb2344?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fGxhcHRvcHxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60"
+                        alt="img">
+                </div>
+
+                <div class="gallery_item camera">
+                    <img src="https://images.unsplash.com/photo-1591533385361-f327d396db9d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjV8fGNhbWVyYXxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60"
+                        alt="img">
+                </div>
+
+                <div class="gallery_item headphone">
+                    <img src="https://images.unsplash.com/photo-1610041321327-b794c052db27?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGhlYWRwaG9uZXN8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                        alt="img">
+                </div>
+
+                <div class="gallery_item mobile">
+                    <img src="https://images.unsplash.com/photo-1557690267-fad2f168bb95?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bW9iaWxlc3xlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60"
+                        alt="img">
+                </div>
+
+                <div class="gallery_item laptop">
+                    <img src="https://images.unsplash.com/photo-1533740566848-5f7d3e04e3d7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzJ8fGxhcHRvcHxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60"
+                        alt="img">
+                </div>
+
+                <div class="gallery_item headphone">
+                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                        alt="img">
+                </div>
+
+                <div class="gallery_item mobile">
+                    <img src="https://images.unsplash.com/photo-1551355738-1875b6664915?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8bW9iaWxlc3xlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60"
+                        alt="img">
+                </div>
+
+                <div class="gallery_item camera">
+                    <img src="https://images.unsplash.com/photo-1515197304934-f95872d7156f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                        alt="img">
+                </div>
+            </div>
+
+            <!-- Lightbox -->
+            <div class="lightbox">
+                <div class="lightbox_wrapper">
+                    <div class="lightbox_content">
+                        <img src="" class="lightbox_img" alt="lightbox-img">
+                    </div>
+                </div>
+                <div class="lightbox_close">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--====== JavaScript ======-->
+    <script src="./main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,225 @@
+/*
+    * Project : 'Filterable Gallery with Lightbox'
+    * Built by : 'Gulshan Songara'
+*/
+
+/*--====== Global Variables ======--*/
+:root {
+    --bg-color: #e0e2fc;
+    --main-color: #4C57D5;
+    --box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+
+/*--====== CSS Reset ======--*/
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--bg-color);
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    vertical-align: middle;
+}
+
+ul {
+    list-style: none;
+}
+
+.overflow_hide {
+    overflow: hidden;
+}
+
+/*--====== Gallery Section ======--*/
+#gallery {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.container {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+}
+
+/* Filterable Gallery */
+.gallery_tabs {
+    background-color: inherit;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    row-gap: 0.8rem;
+    padding: 1.2rem;
+    border-radius: 50px;
+    box-shadow: var(--box-shadow);
+}
+
+.gallery_tabs li {
+    padding: 0.7rem 2rem;
+    border-radius: 50px;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.gallery_tabs li.active,
+.gallery_tabs li:hover {
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+.gallery_wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-top: 4rem;
+}
+
+@media (max-width: 768px) {
+    .gallery_wrapper {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.5rem;
+    }
+}
+
+.gallery_item {
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+/* when the gallery_item has 'show' class */
+.gallery_item.show {
+    animation: fadeIn 0.4s ease-in;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* when the gallery_item has 'hide' class */
+.gallery_item.hide {
+    display: none;
+}
+
+.gallery_item img {
+    transition: transform 0.3s ease;
+}
+
+.gallery_item:hover img {
+    transform: scale(1.1);
+}
+
+/* Lightbox */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 995;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    overflow-x: hidden;
+    overflow-y: auto;
+    pointer-events: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.3s ease, opacity 0.3s ease;
+}
+
+/* when the lightbox is open */
+.lightbox.open {
+    pointer-events: all;
+    visibility: visible;
+    opacity: 1;
+}
+
+.lightbox_wrapper {
+    display: grid;
+    place-items: center;
+    min-height: calc(100% - 3rem);
+    margin: 1.5rem;
+}
+
+@media (max-width: 575.98px) {
+    .lightbox_wrapper {
+        margin: 0.5rem;
+        min-height: calc(100% - 1rem);
+    }
+}
+
+.lightbox_content {
+    box-shadow: var(--box-shadow);
+    max-width: 700px;
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+    overflow: hidden;
+    transform: scale(0);
+    transition: transform 0.5s ease;
+}
+
+/* when Lightbox is open then lightbox-content will... */
+.lightbox.open .lightbox_content {
+    transform: scale(1);
+}
+
+/* lightbox-close-btn */
+.lightbox_close {
+    position: absolute;
+    top: 3vh;
+    right: 3vw;
+    z-index: 999;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.lightbox_close span {
+    width: 100%;
+    height: 3px;
+    margin-top: -1.5px;
+    margin-bottom: -1.5px;
+    background-color: #ddd;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.lightbox_close:hover span {
+    opacity: 1;
+}
+
+.lightbox_close span:first-child {
+    transform: rotate(45deg);
+}
+
+.lightbox_close span:last-child {
+    transform: rotate(-45deg);
+}
