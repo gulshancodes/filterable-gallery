@@ -3,7 +3,6 @@
 
 ### [Demo Link](https://gulshancodes.github.io/filterable-gallery/) 🔗
 
-<br/>
 
 ## Features:
 
